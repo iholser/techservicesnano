@@ -91,6 +91,9 @@ export default function TechServicesNano() {
             <Link href="#about" className="transition-colors hover:text-foreground/80">
               About
             </Link>
+            <Link href="/documents" className="transition-colors hover:text-foreground/80">
+              Documents
+            </Link>
             <Link href="#contact" className="transition-colors hover:text-foreground/80">
               Contact
             </Link>
@@ -281,21 +284,21 @@ export default function TechServicesNano() {
                 <div className="bg-primary/10 p-6 rounded-lg space-y-4">
                   <h3 className="text-xl font-bold">Training Formats Available</h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">In-Person</h4>
-                      <p className="text-muted-foreground">At your location or our office</p>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">500+</div>
+                      <div className="text-sm text-muted-foreground">Repairs Completed</div>
                     </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Remote</h4>
-                      <p className="text-muted-foreground">Via video conferencing</p>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">50+</div>
+                      <div className="text-sm text-muted-foreground">Websites Built</div>
                     </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Hybrid</h4>
-                      <p className="text-muted-foreground">Combination of both formats</p>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">100+</div>
+                      <div className="text-sm text-muted-foreground">Happy Clients</div>
                     </div>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold">Flexible</h4>
-                      <p className="text-muted-foreground">Scheduled around your needs</p>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">24/7</div>
+                      <div className="text-sm text-muted-foreground">Support Available</div>
                     </div>
                   </div>
                 </div>
