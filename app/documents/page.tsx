@@ -2,145 +2,113 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  Monitor,
-  FileText,
-  Download,
   BookOpen,
-  Shield,
-  Wifi,
-  Smartphone,
-  Cloud,
-  Search,
   ArrowLeft,
-  ExternalLink,
 } from "lucide-react"
 import Link from "next/link"
+import { Header } from "@/components/header"
+import { articlesData } from "@/lib/articles-data"
 
 export default function DocumentsPage() {
-  const articles = [
-    {
-      title: "Essential Computer Maintenance Tips",
-      category: "Maintenance",
-      description:
-        "Learn how to keep your computer running smoothly with regular maintenance tasks and best practices.",
-      readTime: "5 min read",
-      icon: <Monitor className="h-5 w-5" />,
-      tags: ["Beginner", "Maintenance"],
-    },
-    {
-      title: "Understanding Cybersecurity Basics",
-      category: "Security",
-      description:
-        "A comprehensive guide to protecting yourself online, including password management and identifying threats.",
-      readTime: "8 min read",
-      icon: <Shield className="h-5 w-5" />,
-      tags: ["Security", "All Levels"],
-    },
-    {
-      title: "Setting Up Your Home Network",
-      category: "Networking",
-      description: "Step-by-step instructions for setting up a secure and reliable home Wi-Fi network.",
-      readTime: "6 min read",
-      icon: <Wifi className="h-5 w-5" />,
-      tags: ["Intermediate", "Networking"],
-    },
-    {
-      title: "Smartphone Security Guide",
-      category: "Security",
-      description: "Protect your mobile device with these essential security tips and privacy settings.",
-      readTime: "4 min read",
-      icon: <Smartphone className="h-5 w-5" />,
-      tags: ["Beginner", "Security"],
-    },
-    {
-      title: "Cloud Storage Best Practices",
-      category: "Cloud Services",
-      description: "Maximize your cloud storage efficiency and security with these professional tips.",
-      readTime: "7 min read",
-      icon: <Cloud className="h-5 w-5" />,
-      tags: ["Intermediate", "Cloud"],
-    },
-    {
-      title: "Troubleshooting Common PC Issues",
-      category: "Troubleshooting",
-      description: "Quick solutions for the most common computer problems you might encounter.",
-      readTime: "10 min read",
-      icon: <Search className="h-5 w-5" />,
-      tags: ["All Levels", "Troubleshooting"],
-    },
-  ]
+  const articles = articlesData
 
-  const fliers = [
-    {
-      title: "Service Menu & Pricing Guide",
-      description: "Complete overview of all our services with transparent pricing information.",
-      fileSize: "2.4 MB",
-      format: "PDF",
-    },
-    {
-      title: "Cybersecurity Checklist",
-      description: "Essential security measures to protect your digital life.",
-      fileSize: "850 KB",
-      format: "PDF",
-    },
-    {
-      title: "Senior Technology Guide",
-      description: "Simplified technology tutorials designed specifically for seniors.",
-      fileSize: "3.1 MB",
-      format: "PDF",
-    },
-    {
-      title: "Computer Maintenance Schedule",
-      description: "A handy reference guide for keeping your computer in top condition.",
-      fileSize: "620 KB",
-      format: "PDF",
-    },
-    {
-      title: "Small Business IT Solutions",
-      description: "Technology solutions tailored for small business needs.",
-      fileSize: "1.8 MB",
-      format: "PDF",
-    },
-    {
-      title: "Password Management Guide",
-      description: "Create and manage strong passwords to protect your accounts.",
-      fileSize: "1.2 MB",
-      format: "PDF",
-    },
-  ]
+  // Placeholder articles - hidden for now
+  // const placeholderArticles = [
+  //   {
+  //     title: "Essential Computer Maintenance Tips",
+  //     category: "Maintenance",
+  //     description:
+  //       "Learn how to keep your computer running smoothly with regular maintenance tasks and best practices.",
+  //     readTime: "5 min read",
+  //     icon: <Monitor className="h-5 w-5" />,
+  //     tags: ["Beginner", "Maintenance"],
+  //   },
+  //   {
+  //     title: "Understanding Cybersecurity Basics",
+  //     category: "Security",
+  //     description:
+  //       "A comprehensive guide to protecting yourself online, including password management and identifying threats.",
+  //     readTime: "8 min read",
+  //     icon: <Shield className="h-5 w-5" />,
+  //     tags: ["Security", "All Levels"],
+  //   },
+  //   {
+  //     title: "Setting Up Your Home Network",
+  //     category: "Networking",
+  //     description: "Step-by-step instructions for setting up a secure and reliable home Wi-Fi network.",
+  //     readTime: "6 min read",
+  //     icon: <Wifi className="h-5 w-5" />,
+  //     tags: ["Intermediate", "Networking"],
+  //   },
+  //   {
+  //     title: "Smartphone Security Guide",
+  //     category: "Security",
+  //     description: "Protect your mobile device with these essential security tips and privacy settings.",
+  //     readTime: "4 min read",
+  //     icon: <Smartphone className="h-5 w-5" />,
+  //     tags: ["Beginner", "Security"],
+  //   },
+  //   {
+  //     title: "Cloud Storage Best Practices",
+  //     category: "Cloud Services",
+  //     description: "Maximize your cloud storage efficiency and security with these professional tips.",
+  //     readTime: "7 min read",
+  //     icon: <Cloud className="h-5 w-5" />,
+  //     tags: ["Intermediate", "Cloud"],
+  //   },
+  //   {
+  //     title: "Troubleshooting Common PC Issues",
+  //     category: "Troubleshooting",
+  //     description: "Quick solutions for the most common computer problems you might encounter.",
+  //     readTime: "10 min read",
+  //     icon: <Search className="h-5 w-5" />,
+  //     tags: ["All Levels", "Troubleshooting"],
+  //   },
+  // ]
+
+  // Placeholder fliers - hidden for now
+  // const fliers = [
+  //   {
+  //     title: "Service Menu & Pricing Guide",
+  //     description: "Complete overview of all our services with transparent pricing information.",
+  //     fileSize: "2.4 MB",
+  //     format: "PDF",
+  //   },
+  //   {
+  //     title: "Cybersecurity Checklist",
+  //     description: "Essential security measures to protect your digital life.",
+  //     fileSize: "850 KB",
+  //     format: "PDF",
+  //   },
+  //   {
+  //     title: "Senior Technology Guide",
+  //     description: "Simplified technology tutorials designed specifically for seniors.",
+  //     fileSize: "3.1 MB",
+  //     format: "PDF",
+  //   },
+  //   {
+  //     title: "Computer Maintenance Schedule",
+  //     description: "A handy reference guide for keeping your computer in top condition.",
+  //     fileSize: "620 KB",
+  //     format: "PDF",
+  //   },
+  //   {
+  //     title: "Small Business IT Solutions",
+  //     description: "Technology solutions tailored for small business needs.",
+  //     fileSize: "1.8 MB",
+  //     format: "PDF",
+  //   },
+  //   {
+  //     title: "Password Management Guide",
+  //     description: "Create and manage strong passwords to protect your accounts.",
+  //     fileSize: "1.2 MB",
+  //     format: "PDF",
+  //   },
+  // ]
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center">
-          <div className="mr-4 flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <Monitor className="h-6 w-6" />
-              <span className="font-bold text-xl">Tech Services Nano</span>
-            </Link>
-          </div>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            <Link href="/#services" className="transition-colors hover:text-foreground/80">
-              Services
-            </Link>
-            <Link href="/#about" className="transition-colors hover:text-foreground/80">
-              About
-            </Link>
-            <Link href="/documents" className="transition-colors hover:text-foreground/80 text-foreground">
-              Documents
-            </Link>
-            <Link href="/#contact" className="transition-colors hover:text-foreground/80">
-              Contact
-            </Link>
-          </nav>
-          <div className="ml-auto flex items-center space-x-4">
-            <Button asChild>
-              <Link href="/#contact">Get Quote</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -182,41 +150,43 @@ export default function DocumentsPage() {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {articles.map((article, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <CardHeader>
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="p-2 rounded-lg bg-primary/10 text-primary">{article.icon}</div>
-                      <Badge variant="secondary" className="text-xs">
-                        {article.category}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      {article.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm text-muted-foreground">{article.readTime}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-sm text-muted-foreground leading-relaxed">{article.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {article.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="outline" className="text-xs">
-                          {tag}
+                <Link key={index} href={`/documents/${article.slug}`}>
+                  <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+                    <CardHeader>
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="p-2 rounded-lg bg-primary/10 text-primary">{article.icon}</div>
+                        <Badge variant="secondary" className="text-xs">
+                          {article.category}
                         </Badge>
-                      ))}
-                    </div>
-                    <Button variant="ghost" size="sm" className="w-full group-hover:bg-primary/10 transition-colors">
-                      Read Article
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
+                      </div>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        {article.title}
+                      </CardTitle>
+                      <CardDescription className="text-sm text-muted-foreground">{article.readTime}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <p className="text-sm text-muted-foreground leading-relaxed">{article.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {article.tags.map((tag, tagIndex) => (
+                          <Badge key={tagIndex} variant="outline" className="text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      <Button variant="ghost" size="sm" className="w-full group-hover:bg-primary/10 transition-colors">
+                        Read Article
+                        <ArrowLeft className="ml-2 h-4 w-4 rotate-180" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Fliers Section */}
-        <section className="w-full py-12 md:py-20 lg:py-24 bg-muted/30">
+        {/* Fliers Section - Hidden for now */}
+        {/* <section className="w-full py-12 md:py-20 lg:py-24 bg-muted/30">
           <div className="container px-4 md:px-6">
             <div className="space-y-4 mb-12">
               <div className="flex items-center gap-3">
@@ -257,7 +227,7 @@ export default function DocumentsPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-20 lg:py-24">

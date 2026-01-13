@@ -22,6 +22,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
+import { Header } from "@/components/header";
 
 export default function TechServicesNano() {
   const services = [
@@ -92,47 +93,7 @@ export default function TechServicesNano() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 mx-4 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center">
-          <div className="mr-4 flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <img
-                src="./logo.png"
-                alt="Tech Services Nano"
-                className="h-12 w-16"
-              />
-              {/* <Monitor className="h-6 w-6" /> */}
-              <span className="font-bold text-xl">Tech Services Nano</span>
-            </Link>
-          </div>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            <Link
-              href="#services"
-              className="transition-colors hover:text-foreground/80"
-            >
-              Services
-            </Link>
-            <Link
-              href="#about"
-              className="transition-colors hover:text-foreground/80"
-            >
-              About
-            </Link>
-            <Link
-              href="#contact"
-              className="transition-colors hover:text-foreground/80"
-            >
-              Contact
-            </Link>
-          </nav>
-          <div className="ml-auto flex items-center space-x-4">
-            <Button asChild>
-              <Link href="#contact">Get Quote</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         {/* Hero Section */}
