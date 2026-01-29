@@ -31,9 +31,9 @@ export function Header() {
           <Link href="/documents" className="transition-colors hover:text-foreground/80">
             Documents
           </Link>
-          <Link href="/shop" className="transition-colors hover:text-foreground/80">
+          {/* <Link href="/shop" className="transition-colors hover:text-foreground/80">
             Shop
-          </Link>
+          </Link> */}
           <Link
             href="/#contact"
             className="transition-colors hover:text-foreground/80"

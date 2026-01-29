@@ -19,6 +19,7 @@ export default function ShopPage() {
   const [categories, setCategories] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [notConfigured, setNotConfigured] = useState(false)
 
   useEffect(() => {
     async function fetchEtsyData() {
@@ -37,6 +38,10 @@ export default function ShopPage() {
 
         const productsData = await productsRes.json()
         const categoriesData = await categoriesRes.json()
+
+        if (productsData.notConfigured || categoriesData.notConfigured) {
+          setNotConfigured(true)
+        }
 
         setProducts(productsData.products || [])
         setCategories(categoriesData.categories?.map((c: any) => c.name) || [])
@@ -108,7 +113,7 @@ export default function ShopPage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold text-lg">
             <Monitor className="h-6 w-6" />
             <span>Tech Services Nano</span>
@@ -131,7 +136,7 @@ export default function ShopPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container py-12">
+      <main className="container mx-auto px-4 md:px-6 py-12">
         {/* Title & Search */}
         <div className="space-y-6 mb-12">
           <div>
@@ -199,6 +204,15 @@ export default function ShopPage() {
                 <Button variant="outline" onClick={() => window.location.reload()}>
                   Retry
                 </Button>
+              </div>
+            ) : notConfigured ? (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground mb-4">
+                  Etsy shop integration is not configured yet.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  To enable the shop, add ETSY_API_KEY and ETSY_SHOP_ID to your environment variables.
+                </p>
               </div>
             ) : filteredProducts.length === 0 ? (
               <div className="text-center py-12">
