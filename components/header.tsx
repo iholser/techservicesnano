@@ -22,12 +22,12 @@ export function Header() {
           >
             Services
           </Link>
-          <Link
+          {/* <Link
             href="/#about"
             className="transition-colors hover:text-foreground/80"
           >
             About
-          </Link>
+          </Link> */}
           <Link href="/documents" className="transition-colors hover:text-foreground/80">
             Documents
           </Link>
