@@ -11,7 +11,7 @@ import {
   Monitor,
   Wrench,
   Download,
-  GraduationCap,
+  // GraduationCap, // Uncomment when tutoring services are offered
   Users,
   Globe,
   Network,
@@ -20,6 +20,7 @@ import {
   CheckCircle,
   ArrowRight,
   ShieldCheck,
+  XCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/header";
@@ -32,30 +33,30 @@ export default function TechServicesNano() {
       description:
         "Professional diagnosis and repair of desktops, laptops, and all-in-one computers. Hardware and software troubleshooting.",
     },
-    {
-      icon: <Wrench className="h-8 w-8" />,
-      title: "Console Repair",
-      description:
-        "Expert repair services for gaming consoles including PlayStation, Xbox, Nintendo Switch, and retro gaming systems.",
-    },
+    // {
+    //   icon: <Wrench className="h-8 w-8" />,
+    //   title: "Console Repair",
+    //   description:
+    //     "Expert repair services for gaming consoles including PlayStation, Xbox, Nintendo Switch, and retro gaming systems.",
+    // },
     {
       icon: <Download className="h-8 w-8" />,
       title: "Software Installation",
       description:
         "Operating system installation, software setup, driver updates, and system optimization for peak performance.",
     },
-    {
-      icon: <GraduationCap className="h-8 w-8" />,
-      title: "Tutoring",
-      description:
-        "One-on-one technology tutoring for individuals looking to improve their computer skills and digital literacy.",
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      title: "Corporate Training",
-      description:
-        "Professional training sessions for businesses on software usage, cybersecurity, and digital workflow optimization.",
-    },
+    // {
+    //   icon: <GraduationCap className="h-8 w-8" />,
+    //   title: "Tutoring",
+    //   description:
+    //     "One-on-one technology tutoring for individuals looking to improve their computer skills and digital literacy.",
+    // },
+    // {
+    //   icon: <Users className="h-8 w-8" />,
+    //   title: "Corporate Training",
+    //   description:
+    //     "Professional training sessions for businesses on software usage, cybersecurity, and digital workflow optimization.",
+    // },
     {
       icon: <Globe className="h-8 w-8" />,
       title: "Website Design",
@@ -85,7 +86,6 @@ export default function TechServicesNano() {
   const features = [
     "Fast turnaround times",
     "Competitive pricing",
-    "Expert technicians",
     "Quality guarantee",
     "On-site service available",
     "Free diagnostics",
@@ -108,7 +108,7 @@ export default function TechServicesNano() {
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                   Tech Services Nano provides comprehensive IT and repair solutions for
                   individuals and businesses. From computer repair to website
-                  design, we handle all your technology needs with expertise and
+                  design, we handle your technology needs with expertise and
                   care.
                 </p>
               </div>
@@ -143,7 +143,7 @@ export default function TechServicesNano() {
                   Services
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a comprehensive range of IT and repair services to meet all your
+                  We offer a range of IT and repair services to meet all your
                   technology needs
                 </p>
               </div>
@@ -168,7 +168,7 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Tutoring & Training Section */}
+        {/* Tutoring & Training Section - Uncomment when tutoring services are offered
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -327,6 +327,7 @@ export default function TechServicesNano() {
             </div>
           </div>
         </section>
+        */}
 
         {/* Pricing Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
@@ -342,7 +343,8 @@ export default function TechServicesNano() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3 lg:gap-8">
+            {/* When tutoring is offered, change to: <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3 lg:gap-8"> */}
+            <div className="mx-auto max-w-md py-12">
               <Card className="relative">
                 <CardHeader className="text-center">
                   <Wrench className="h-8 w-8 mx-auto text-primary" />
@@ -373,10 +375,10 @@ export default function TechServicesNano() {
                       <CheckCircle className="h-4 w-4 text-primary" />
                       <span>On-site service available</span>
                     </li>
-                    <li className="flex items-center gap-2">
+                    {/* <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
                       <span>Emergency service options</span>
-                    </li>
+                    </li> */}
                   </ul>
                   <div className="pt-4">
                     <div className="text-xs text-muted-foreground text-center">
@@ -387,6 +389,7 @@ export default function TechServicesNano() {
                 </CardContent>
               </Card>
 
+              {/* Individual Tutoring pricing card - Uncomment when tutoring services are offered
               <Card className="relative">
                 <CardHeader className="text-center">
                   <GraduationCap className="h-8 w-8 mx-auto text-primary" />
@@ -429,7 +432,9 @@ export default function TechServicesNano() {
                   </div>
                 </CardContent>
               </Card>
+              */}
 
+              {/* Group Training pricing card - Uncomment when tutoring services are offered
               <Card className="relative">
                 <CardHeader className="text-center">
                   <Users className="h-8 w-8 mx-auto text-primary" />
@@ -475,6 +480,38 @@ export default function TechServicesNano() {
                   </div>
                 </CardContent>
               </Card>
+              */}
+            </div>
+          </div>
+        </section>
+
+        {/* Services We Don't Offer Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Services We Don't Currently Offer
+                </h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  As a small home-based business, there are some services we're
+                  not able to provide at this time
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-2xl py-12">
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <XCircle className="h-5 w-5 text-muted-foreground" />
+                  <span className="text-lg">Microsoldering</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <XCircle className="h-5 w-5 text-muted-foreground" />
+                  <span className="text-lg">
+                    Services requiring specialized tools we don't have
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
