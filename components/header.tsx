@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { isSchedulingConfigured } from "@/lib/scheduling-config";
 
 export function Header() {
+  const schedulingEnabled = isSchedulingConfigured();
+
   return (
     <header className="sticky top-0 z-50 mx-4 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center">
@@ -31,6 +34,14 @@ export function Header() {
           <Link href="/documents" className="transition-colors hover:text-foreground/80">
             Documents
           </Link>
+          {schedulingEnabled && (
+            <Link
+              href="/schedule"
+              className="transition-colors hover:text-foreground/80"
+            >
+              Book
+            </Link>
+          )}
           {/* <Link href="/shop" className="transition-colors hover:text-foreground/80">
             Shop
           </Link> */}
@@ -43,7 +54,9 @@ export function Header() {
         </nav>
         <div className="ml-auto flex items-center space-x-4">
           <Button asChild>
-            <Link href="/#contact">Get Quote</Link>
+            <Link href={schedulingEnabled ? "/schedule" : "/#contact"}>
+              {schedulingEnabled ? "Book Appointment" : "Get Quote"}
+            </Link>
           </Button>
         </div>
       </div>
