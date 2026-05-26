@@ -39,7 +39,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="transition-colors hover:text-foreground/80"
           >
-            Book
+            Schedule
           </a>
           {/* <Link href="/shop" className="transition-colors hover:text-foreground/80">
             Shop
@@ -54,7 +54,7 @@ export function Header() {
         <div className="ml-auto flex items-center space-x-4">
           <Button asChild>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              Book Appointment
+              Schedule Appointment
             </a>
           </Button>
         </div>
