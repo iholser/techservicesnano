@@ -47,7 +47,6 @@ export default function TechServicesNano() {
     {
       icon: <Gauge className="h-8 w-8" />,
       title: "Computer Tune-Up / Performance Optimization",
-      price: "$60",
       description:
         "Restore your computer to peak performance with a comprehensive tune-up.",
       includes: [
@@ -60,7 +59,6 @@ export default function TechServicesNano() {
     {
       icon: <ShieldAlert className="h-8 w-8" />,
       title: "Basic Malware Removal",
-      price: "$75",
       description:
         "Remove viruses, adware, and other malicious software from your system.",
       includes: [
@@ -73,7 +71,6 @@ export default function TechServicesNano() {
     {
       icon: <RotateCcw className="h-8 w-8" />,
       title: "Operating System Reinstall",
-      price: "$95",
       description:
         "Fresh OS installation when your system needs a clean start.",
       includes: [
@@ -86,7 +83,6 @@ export default function TechServicesNano() {
     {
       icon: <MonitorSmartphone className="h-8 w-8" />,
       title: "New Computer Setup",
-      price: "$75",
       description:
         "Get your new computer ready to use right out of the box.",
       includes: [
@@ -99,7 +95,6 @@ export default function TechServicesNano() {
     {
       icon: <Download className="h-8 w-8" />,
       title: "Software Installation",
-      price: "$45",
       description:
         "Professional installation and configuration of your software.",
       includes: [
@@ -112,7 +107,6 @@ export default function TechServicesNano() {
     {
       icon: <MailOpen className="h-8 w-8" />,
       title: "Email Setup / Configuration",
-      price: "$45",
       description:
         "Set up or configure email on your computer, phone, or tablet.",
       includes: [
@@ -125,7 +119,6 @@ export default function TechServicesNano() {
     {
       icon: <Printer className="h-8 w-8" />,
       title: "Printer Setup",
-      price: "$45",
       description:
         "Get your printer connected and working with all your devices.",
       includes: [
@@ -138,7 +131,6 @@ export default function TechServicesNano() {
     {
       icon: <Wifi className="h-8 w-8" />,
       title: "Router / Wi-Fi Setup",
-      price: "$75",
       description:
         "Set up or optimize your home or small-office wireless network.",
       includes: [
@@ -151,7 +143,6 @@ export default function TechServicesNano() {
     {
       icon: <HardDrive className="h-8 w-8" />,
       title: "Basic Data Transfer",
-      price: "$95",
       description:
         "Safely move your files, photos, and documents between devices.",
       includes: [
@@ -164,8 +155,8 @@ export default function TechServicesNano() {
   ];
 
   const features = [
-    "Free basic diagnostics",
-    "Transparent flat-rate pricing",
+    "One simple rate: $50/hour",
+    "Diagnostic fee credited toward repair",
     "90-day service guarantee",
     "Ethical, practical repairs",
     "Home & small-business focused",
@@ -186,9 +177,9 @@ export default function TechServicesNano() {
                   <span className="block text-primary">You Can Trust</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Ethical, practical computer repair and IT support with
-                  transparent flat-rate pricing. Free basic diagnostics on every
-                  visit and a 90-day guarantee on all repairs.
+                  Ethical, practical computer repair and IT support at one
+                  simple rate: $50/hour. Diagnostic time is credited toward
+                  your repair, and every job is backed by a 90-day guarantee.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-2 max-w-lg">
@@ -283,7 +274,7 @@ export default function TechServicesNano() {
           </div>
         </section>
 
-        {/* Flat Rate Service Menu */}
+        {/* Service Menu */}
         <section
           id="services"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
@@ -292,11 +283,11 @@ export default function TechServicesNano() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Flat Rate Service Menu
+                  Service Menu
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Transparent, fixed pricing for common computer repair and
-                  setup services — no surprises, no hidden fees
+                  Common computer repair and setup services, all billed at our
+                  simple $50/hour rate — no surprises, no hidden fees
                 </p>
               </div>
             </div>
@@ -304,16 +295,11 @@ export default function TechServicesNano() {
               {services.map((service, index) => (
                 <Card key={index} className="relative overflow-hidden">
                   <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="text-primary">{service.icon}</div>
-                        <CardTitle className="text-lg">
-                          {service.title}
-                        </CardTitle>
-                      </div>
-                      <Badge className="text-sm font-bold shrink-0">
-                        {service.price}
-                      </Badge>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-primary">{service.icon}</div>
+                      <CardTitle className="text-lg">
+                        {service.title}
+                      </CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -335,6 +321,7 @@ export default function TechServicesNano() {
             </div>
           </div>
         </section>
+
 
         {/* Diagnostic Services Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -381,12 +368,6 @@ export default function TechServicesNano() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold">$50</div>
-                    <div className="text-sm text-muted-foreground">
-                      per hour
-                    </div>
-                  </div>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
@@ -405,16 +386,13 @@ export default function TechServicesNano() {
                       <span>Research and documentation</span>
                     </li>
                   </ul>
-                  <div className="text-xs text-muted-foreground text-center pt-2">
-                    Requires customer authorization before proceeding.
-                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Hourly Services / Pricing Section */}
+        {/* Pricing Section */}
         <section
           id="pricing"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
@@ -423,11 +401,11 @@ export default function TechServicesNano() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Hourly Services
+                  Simple, Honest Pricing
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  For general technical work not covered by our flat-rate
-                  service menu
+                  One flat rate for every diagnostic and repair — no menus, no
+                  guessing
                 </p>
               </div>
             </div>
@@ -436,10 +414,10 @@ export default function TechServicesNano() {
                 <CardHeader className="text-center">
                   <Wrench className="h-8 w-8 mx-auto text-primary" />
                   <CardTitle className="text-2xl">
-                    General Technical Work
+                    Diagnostics &amp; Repairs
                   </CardTitle>
                   <CardDescription>
-                    Flexible hourly rate for custom jobs
+                    One rate for everything we do
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -449,29 +427,34 @@ export default function TechServicesNano() {
                       per hour
                     </div>
                   </div>
+                  <div className="rounded-lg bg-primary/10 p-4 text-sm text-center">
+                    <span className="font-medium">
+                      Diagnostic fees are fully credited toward your repair.
+                    </span>{" "}
+                    You pay only for the time it takes to find the problem —
+                    if you move forward with the fix, that cost comes off
+                    your repair bill. If you decide not to proceed, you&apos;re
+                    only charged for the diagnostic time used.
+                  </div>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Hardware cleaning</span>
+                      <span>Diagnostics and troubleshooting</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Minor hardware repair</span>
+                      <span>Hardware cleaning and minor repair</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>System troubleshooting</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Device inspection</span>
+                      <span>Everything on our service menu</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
                       <span>General technical assistance</span>
                     </li>
                   </ul>
-                  <div className="pt-4">
+                  <div className="pt-2">
                     <div className="text-xs text-muted-foreground text-center">
                       Minimum 1 hour charge. Travel fee may apply for on-site
                       service.
@@ -679,8 +662,8 @@ export default function TechServicesNano() {
                 Get In Touch
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Ready to solve your IT challenges? Contact us today for a free
-                basic diagnostic and quote.
+                Ready to solve your IT challenges? Contact us today to get
+                started at our simple $50/hour rate.
               </p>
             </div>
 
